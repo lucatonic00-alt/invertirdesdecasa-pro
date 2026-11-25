@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reforma del Ahorro e Inversión · Lucas Capital Management</title>
+<meta name="description" content="Guía completa sobre la reforma de ahorro e inversión aprobada en España: impacto en planes de pensiones, fondos, plusvalías y fiscalidad del inversor particular.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:#040D1E;color:#fff;line-height:1.5}
+a{text-decoration:none;color:inherit}
+.container{max-width:1000px;margin:0 auto;padding:0 32px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(4,13,30,.96);backdrop-filter:blur(14px);border-bottom:.5px solid rgba(200,151,58,.13)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 32px;gap:24px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{width:38px;height:38px;border-radius:10px;background:#C8973A;display:flex;align-items:center;justify-content:center}
+.logo-text-main{font-size:14px;font-weight:600;letter-spacing:.01em}
+.logo-text-sub{font-size:9px;color:rgba(200,151,58,.65);letter-spacing:.16em;text-transform:uppercase;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:18px}
+.nav-links a{font-size:13px;color:rgba(255,255,255,.55);font-weight:500;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:#C8973A}
+.btn-gold{background:#C8973A;color:#040D1E;border:none;border-radius:10px;padding:9px 20px;font-weight:700;font-size:13px;cursor:pointer;font-family:inherit;transition:opacity .2s}
+.btn-gold:hover{opacity:.85}
+
+/* PAGE HERO */
+.page-hero{padding:72px 0 56px;background:linear-gradient(180deg,#05102A 0%,#040D1E 100%);border-bottom:.5px solid rgba(123,143,245,.12)}
+
+/* CONTENT */
+.content-body{padding:64px 0 80px}
+.section-block{margin-bottom:56px}
+.section-block h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.07)}
+.section-block p{font-size:15px;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:14px}
+.section-block p:last-child{margin-bottom:0}
+
+/* TOPIC CARDS */
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:32px}
+.topic-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;transition:border-color .2s}
+.topic-card:hover{border-color:rgba(123,143,245,.35)}
+.topic-icon{font-size:28px;margin-bottom:12px}
+.topic-title{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px}
+.topic-desc{font-size:13px;color:rgba(255,255,255,.45);line-height:1.6}
+
+/* STATUS BANNER */
+.status-banner{background:linear-gradient(135deg,rgba(123,143,245,.08),rgba(123,143,245,.03));border:1px solid rgba(123,143,245,.25);border-radius:20px;padding:48px;text-align:center;margin-bottom:48px}
+
+/* TIMELINE */
+.timeline{position:relative;padding-left:28px;margin-top:28px}
+.timeline::before{content:'';position:absolute;left:8px;top:6px;bottom:6px;width:1.5px;background:linear-gradient(to bottom,rgba(123,143,245,.5),rgba(200,151,58,.3))}
+.tl-item{position:relative;margin-bottom:28px}
+.tl-dot{position:absolute;left:-24px;top:4px;width:12px;height:12px;border-radius:50%;border:2px solid;flex-shrink:0}
+.tl-dot.done{background:#00D084;border-color:#00D084}
+.tl-dot.pending{background:transparent;border-color:#7B8FF5}
+.tl-dot.soon{background:#C8973A;border-color:#C8973A}
+.tl-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.tl-title{font-size:15px;font-weight:600;color:#fff;margin-bottom:4px}
+.tl-desc{font-size:13px;color:rgba(255,255,255,.45);line-height:1.55}
+
+/* HIGHLIGHT BOX */
+.highlight{background:rgba(200,151,58,.06);border-left:3px solid #C8973A;border-radius:0 12px 12px 0;padding:20px 24px;margin:24px 0}
+.highlight p{font-size:14px;color:rgba(255,255,255,.65);margin:0;line-height:1.65}
+.highlight strong{color:#C8973A}
+
+/* DISCLAIMER */
+.disclaimer{background:rgba(255,255,255,.02);border-left:3px solid rgba(255,255,255,.12);border-radius:0 10px 10px 0;padding:16px 20px;margin-top:40px}
+.disclaimer p{font-size:12.5px;color:rgba(255,255,255,.35);margin:0;line-height:1.6}
+
+/* STICKY TOC */
+.toc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:24px;position:sticky;top:80px}
+.toc h4{font-size:11px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.toc a{display:block;font-size:13px;color:rgba(255,255,255,.5);padding:5px 0;border-left:2px solid transparent;padding-left:12px;margin-bottom:4px;transition:all .2s}
+.toc a:hover{color:#C8973A;border-left-color:#C8973A}
+
+/* LAYOUT */
+.content-layout{display:grid;grid-template-columns:1fr 220px;gap:40px;align-items:start}
+@media(max-width:900px){
+  .content-layout{grid-template-columns:1fr}
+  .toc{display:none}
+  .nav-links{display:none}
+  .nav-inner{padding:12px 16px}
+  .container{padding:0 16px}
+  .page-hero{padding:48px 0 36px}
+  .topic-grid{grid-template-columns:1fr}
+}
+
+/* FOOTER */
+footer{background:#020810;border-top:.5px solid rgba(200,151,58,.1);padding:32px 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{font-size:12px;color:rgba(255,255,255,.3);transition:color .2s}
+.footer-links a:hover{color:#C8973A}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 40 40" width="22" height="22"><circle cx="20" cy="20" r="17" fill="none" stroke="#040D1E" stroke-width="2.2"/><ellipse cx="20" cy="20" rx="8.5" ry="17" fill="none" stroke="#040D1E" stroke-width="1.5"/><line x1="3" y1="20" x2="37" y2="20" stroke="#040D1E" stroke-width="1.5"/><text x="20" y="26.5" text-anchor="middle" font-size="15" font-weight="900" font-family="Georgia,serif" fill="#040D1E">$</text></svg>
+      </div>
+      <div>
+        <div class="logo-text-main">Lucas Capital Management</div>
+        <div class="logo-text-sub">Invertir desde casa</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#galeria">La herramienta</a>
+      <a href="index.html#precios">Precios</a>
+      <a href="index.html#libro">El libro</a>
+      <a href="opinion.html">Opinión</a>
+      <a href="reformas.html" class="active">Reformas</a>
+      <a href="https://lucascapitalmanagement.com/retiro">Programa LCM</a>
+      <a href="index.html#solicitud" style="border-bottom:1px solid rgba(200,151,58,.35);padding-bottom:1px">Acceso individual</a>
+      <a href="app.html"><button class="btn-gold">🔐 Acceso alumnos</button></a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(123,143,245,.1);border:1px solid rgba(123,143,245,.3);border-radius:20px;padding:7px 18px;margin-bottom:20px">
+      <span style="font-size:12px;font-weight:700;color:#7B8FF5;letter-spacing:.1em;text-transform:uppercase">📋 Legislación · España 2025–2026</span>
+    </div>
+    <h1 style="font-family:'Playfair Display',serif;font-size:44px;font-weight:700;color:#fff;margin-bottom:14px;line-height:1.15">Reforma del <span style="color:#7B8FF5">Ahorro</span> e <span style="color:#C8973A">Inversión</span></h1>
+    <p style="font-size:17px;color:rgba(255,255,255,.55);max-width:600px;line-height:1.65">Todo lo que necesitas saber sobre la reforma aprobada por el Gobierno español y su impacto directo en tu cartera de inversión.</p>
+    <div style="display:flex;align-items:center;gap:14px;margin-top:28px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.4)">
+        <span style="color:#C8973A">✍️</span> Redactado por <strong style="color:rgba(255,255,255,.7)">Lucas González</strong>
+      </div>
+      <span style="color:rgba(255,255,255,.15)">|</span>
+      <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(200,151,58,.1);border:1px solid rgba(200,151,58,.25);border-radius:12px;padding:5px 12px">
+        <span style="color:#C8973A;font-size:14px">⏳</span>
+        <span style="font-size:12px;font-weight:600;color:#C8973A">Análisis en elaboración</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENIDO -->
+<section class="content-body">
+  <div class="container">
+    <div class="content-layout">
+
+      <!-- CUERPO PRINCIPAL -->
+      <div>
+
+        <!-- ESTADO ACTUAL -->
+        <div class="status-banner" style="margin-bottom:48px">
+          <div style="font-size:52px;margin-bottom:16px">⚖️</div>
+          <h2 style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;margin-bottom:12px">Guía completa en preparación</h2>
+          <p style="font-size:15px;color:rgba(255,255,255,.5);max-width:520px;margin:0 auto 28px;line-height:1.65">Lucas González está elaborando un análisis detallado de la reforma de ahorro e inversión aprobada en España, con los cambios más relevantes para el inversor particular y cómo adaptarse a ellos.</p>
+          <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(200,151,58,.1);border:1px solid rgba(200,151,58,.3);border-radius:12px;padding:12px 24px">
+            <span style="color:#C8973A;font-size:16px">📅</span>
+            <span style="font-size:14px;font-weight:600;color:#C8973A">Publicación prevista: Próximamente</span>
+          </div>
+        </div>
+
+        <!-- INTRODUCCIÓN -->
+        <div class="section-block" id="intro">
+          <h2>¿Qué cambia con esta reforma?</h2>
+          <p>El Gobierno español ha aprobado una reforma que modifica aspectos clave del marco fiscal y regulatorio para el ahorro y la inversión de los ciudadanos. Esta reforma afecta directamente a los principales vehículos de ahorro a largo plazo utilizados por el inversor particular español.</p>
+          <p>Desde los planes de pensiones hasta los fondos de inversión, pasando por la tributación de las plusvalías y el tratamiento de los activos digitales, los cambios son significativos y requieren una revisión de la estrategia patrimonial de cada inversor.</p>
+          <div class="highlight">
+            <p><strong>Nota importante:</strong> El contenido de esta sección se irá completando con el análisis definitivo de Lucas González. Los apartados que ves a continuación describen los bloques temáticos que se cubrirán en profundidad.</p>
+          </div>
+        </div>
+
+        <!-- BLOQUES TEMÁTICOS -->
+        <div class="section-block" id="bloques">
+          <h2>Bloques del análisis</h2>
+          <p>El análisis cubrirá los siguientes ámbitos de la reforma, con su impacto concreto para el inversor particular:</p>
+          <div class="topic-grid">
+
+            <div class="topic-card">
+              <div class="topic-icon">🏦</div>
+              <div class="topic-title">Planes de pensiones</div>
+              <div class="topic-desc">Cambios en los límites de aportación, condiciones de rescate anticipado y nueva tributación a la recuperación del capital.</div>
+            </div>
+
+            <div class="topic-card">
+              <div class="topic-icon">📈</div>
+              <div class="topic-title">Fondos de inversión</div>
+              <div class="topic-desc">Modificaciones en las condiciones de traspaso entre fondos, ventajas fiscales y nuevos requisitos de información al partícipe.</div>
+            </div>
+
+            <div class="topic-card">
+              <div class="topic-icon">💰</div>
+              <div class="topic-title">Plusvalías y IRPF</div>
+              <div class="topic-desc">Nuevos tipos marginales sobre las ganancias patrimoniales y cambios en la base imponible del ahorro según tramos.</div>
+            </div>
+
+            <div class="topic-card">
+              <div class="topic-icon">🏠</div>
+              <div class="topic-title">Inversión inmobiliaria</div>
+              <div class="topic-desc">Medidas que afectan a los REITs (SOCIMIs), alquiler vacacional y la exención por reinversión en vivienda habitual.</div>
+            </div>
+
+            <div class="topic-card">
+              <div class="topic-icon">🌐</div>
+              <div class="topic-title">ETFs y renta variable</div>
+              <div class="topic-desc">Cambios regulatorios para los productos cotizados en bolsa y su tratamiento fiscal diferenciado respecto a los fondos.</div>
+            </div>
+
+            <div class="topic-card">
+              <div class="topic-icon">₿</div>
+              <div class="topic-title">Criptomonedas</div>
+              <div class="topic-desc">Marco fiscal actualizado para activos digitales: declaración, tributación de ganancias y nuevas obligaciones informativas.</div>
+            </div>
+
+            <div class="topic-card">
+              <div class="topic-icon">📋</div>
+              <div class="topic-title">PIAS y seguros de ahorro</div>
+              <div class="topic-desc">Revisión del tratamiento fiscal de los Planes Individuales de Ahorro Sistemático y otros productos aseguradores de ahorro.</div>
+            </div>
+
+            <div class="topic-card">
+              <div class="topic-icon">🧾</div>
+              <div class="topic-title">Declaración de patrimonio</div>
+              <div class="topic-desc">Nuevos umbrales, obligaciones de declaración y tratamiento de activos en el extranjero (Modelo 720 y equivalentes).</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CRONOLOGÍA -->
+        <div class="section-block" id="cronologia">
+          <h2>Cronología de la reforma</h2>
+          <p>El proceso legislativo de la reforma se ha desarrollado a lo largo de varias fases:</p>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-dot done"></div>
+              <div class="tl-label" style="color:#00D084">✓ Completado</div>
+              <div class="tl-title">Proyecto de Ley aprobado en Consejo de Ministros</div>
+              <div class="tl-desc">El Gobierno remite el proyecto al Parlamento para su tramitación ordinaria.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot done"></div>
+              <div class="tl-label" style="color:#00D084">✓ Completado</div>
+              <div class="tl-title">Aprobación en el Congreso de los Diputados</div>
+              <div class="tl-desc">La reforma supera el trámite parlamentario con las enmiendas incorporadas.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot soon"></div>
+              <div class="tl-label" style="color:#C8973A">En curso</div>
+              <div class="tl-title">Publicación en el BOE y entrada en vigor</div>
+              <div class="tl-desc">Los preceptos entran en vigor de forma escalonada, con distintas fechas de aplicación según la materia.</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot pending"></div>
+              <div class="tl-label" style="color:#7B8FF5">Pendiente</div>
+              <div class="tl-title">Adaptación de las entidades financieras</div>
+              <div class="tl-desc">Los bancos, gestoras y brokers actualizan sus sistemas para cumplir con la nueva normativa.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div style="background:linear-gradient(135deg,rgba(200,151,58,.08),rgba(200,151,58,.02));border:1px solid rgba(200,151,58,.2);border-radius:20px;padding:40px;text-align:center;margin-bottom:40px">
+          <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:10px">¿Quieres que te avisemos cuando se publique?</h3>
+          <p style="font-size:14px;color:rgba(255,255,255,.5);margin-bottom:24px">Los usuarios con acceso individual recibirán el análisis completo en cuanto esté publicado.</p>
+          <a href="index.html#solicitud"><button class="btn-gold" style="padding:14px 32px;font-size:15px">Solicitar acceso individual →</button></a>
+        </div>
+
+        <!-- DISCLAIMER -->
+        <div class="disclaimer">
+          <p><strong style="color:rgba(255,255,255,.55)">Aviso legal:</strong> El contenido de esta página tiene carácter exclusivamente informativo y divulgativo. No constituye asesoramiento jurídico, fiscal ni financiero. Las decisiones fiscales y de inversión deben consultarse siempre con un asesor certificado que conozca tu situación personal. Lucas Capital Management no es responsable de los errores u omisiones en la información publicada ni de las consecuencias derivadas de su uso.</p>
+        </div>
+
+      </div><!-- /main col -->
+
+      <!-- TABLA DE CONTENIDOS (desktop) -->
+      <aside>
+        <div class="toc">
+          <h4>Contenido</h4>
+          <a href="#intro">¿Qué cambia?</a>
+          <a href="#bloques">Bloques del análisis</a>
+          <a href="#cronologia">Cronología</a>
+          <div style="margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.07)">
+            <a href="opinion.html" style="color:#C8973A;border:none;padding-left:0;font-weight:600;font-size:12px">✍️ Ir a Opinión →</a>
+          </div>
+          <div style="margin-top:12px">
+            <a href="app.html" style="color:rgba(255,255,255,.4);border:none;padding-left:0;font-size:12px">🔐 Acceso dashboard</a>
+          </div>
+        </div>
+      </aside>
+
+    </div><!-- /content-layout -->
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:26px;height:26px;border-radius:7px;background:#C8973A;display:flex;align-items:center;justify-content:center">
+          <svg viewBox="0 0 40 40" width="16" height="16"><circle cx="20" cy="20" r="17" fill="none" stroke="#040D1E" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="14" font-weight="900" font-family="Georgia,serif" fill="#040D1E">$</text></svg>
+        </div>
+        <span style="font-size:12px;color:rgba(255,255,255,.35)">© 2026 Lucas Capital Management · Lucas González Sánchez</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="opinion.html">Opinión</a>
+        <a href="reformas.html">Reformas</a>
+        <a href="index.html#solicitud">Contacto</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
