@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opinión · Lucas Capital Management</title>
+<meta name="description" content="Artículos de análisis de mercado, estrategia de inversión y gestión patrimonial por Lucas González — Lucas Capital Management.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:#040D1E;color:#fff;line-height:1.5}
+a{text-decoration:none;color:inherit}
+.container{max-width:1100px;margin:0 auto;padding:0 32px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(4,13,30,.96);backdrop-filter:blur(14px);border-bottom:.5px solid rgba(200,151,58,.13)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 32px;gap:24px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{width:38px;height:38px;border-radius:10px;background:#C8973A;display:flex;align-items:center;justify-content:center}
+.logo-text-main{font-size:14px;font-weight:600;letter-spacing:.01em}
+.logo-text-sub{font-size:9px;color:rgba(200,151,58,.65);letter-spacing:.16em;text-transform:uppercase;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:18px}
+.nav-links a{font-size:13px;color:rgba(255,255,255,.55);font-weight:500;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:#C8973A}
+.btn-gold{background:#C8973A;color:#040D1E;border:none;border-radius:10px;padding:9px 20px;font-weight:700;font-size:13px;cursor:pointer;font-family:inherit;transition:opacity .2s}
+.btn-gold:hover{opacity:.85}
+
+/* HERO */
+.page-hero{padding:72px 0 56px;background:linear-gradient(180deg,#060F24 0%,#040D1E 100%);border-bottom:.5px solid rgba(200,151,58,.1)}
+
+/* ARTICLE CARDS */
+.article-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:28px;margin-bottom:60px}
+.article-card{background:rgba(255,255,255,.03);border:1px solid rgba(200,151,58,.13);border-radius:18px;overflow:hidden;transition:border-color .25s,transform .25s;cursor:pointer;display:flex;flex-direction:column}
+.article-card:hover{border-color:rgba(200,151,58,.5);transform:translateY(-3px)}
+.card-img{width:100%;height:180px;object-fit:cover;background:linear-gradient(135deg,rgba(200,151,58,.12),rgba(123,143,245,.08));display:flex;align-items:center;justify-content:center;font-size:48px;flex-shrink:0}
+.card-body{padding:24px;flex:1;display:flex;flex-direction:column}
+.card-tag{display:inline-flex;align-items:center;gap:6px;border-radius:20px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;width:fit-content}
+.tag-mercados{background:rgba(200,151,58,.1);color:#C8973A}
+.tag-estrategia{background:rgba(0,208,132,.1);color:#00D084}
+.tag-economia{background:rgba(123,143,245,.1);color:#7B8FF5}
+.tag-fiscal{background:rgba(255,120,70,.1);color:#FF7846}
+.card-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;line-height:1.35;margin-bottom:10px}
+.card-excerpt{font-size:14px;color:rgba(255,255,255,.5);line-height:1.65;margin-bottom:20px;flex:1}
+.card-meta{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+.author{display:flex;align-items:center;gap:8px}
+.avatar{width:30px;height:30px;border-radius:50%;background:#C8973A;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#040D1E;flex-shrink:0}
+.author-name{font-size:12px;color:rgba(255,255,255,.45)}
+.read-more{font-size:12px;color:rgba(200,151,58,.7);font-weight:600;white-space:nowrap}
+
+/* PRÓXIMO */
+.coming-soon{position:relative;overflow:hidden}
+.coming-soon::after{content:'PRÓXIMAMENTE';position:absolute;top:12px;right:-28px;background:rgba(200,151,58,.85);color:#040D1E;font-size:9px;font-weight:800;letter-spacing:.12em;padding:4px 36px;transform:rotate(35deg);pointer-events:none}
+
+/* FEATURED */
+.featured{background:linear-gradient(135deg,rgba(200,151,58,.07),rgba(200,151,58,.02));border:1px solid rgba(200,151,58,.25);border-radius:20px;padding:40px;display:flex;gap:40px;align-items:center;margin-bottom:48px}
+.featured-icon{font-size:72px;flex-shrink:0}
+.featured-label{font-size:11px;font-weight:700;color:#C8973A;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.featured-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:12px}
+.featured-excerpt{font-size:15px;color:rgba(255,255,255,.55);line-height:1.65;margin-bottom:24px}
+
+/* NEWSLETTER */
+.newsletter{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:48px;text-align:center;margin-top:60px}
+
+/* FILTER */
+.filter-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+.filter-btn{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:7px 18px;font-size:13px;font-weight:600;color:rgba(255,255,255,.5);cursor:pointer;transition:all .2s;font-family:inherit}
+.filter-btn:hover,.filter-btn.on{background:rgba(200,151,58,.12);border-color:rgba(200,151,58,.4);color:#C8973A}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none}
+  .nav-inner{padding:12px 16px}
+  .container{padding:0 16px}
+  .page-hero{padding:48px 0 36px}
+  .article-grid{grid-template-columns:1fr}
+  .featured{flex-direction:column;gap:20px;padding:28px}
+  .featured-icon{font-size:48px}
+}
+
+/* FOOTER */
+footer{background:#020810;border-top:.5px solid rgba(200,151,58,.1);padding:32px 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{font-size:12px;color:rgba(255,255,255,.3);transition:color .2s}
+.footer-links a:hover{color:#C8973A}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 40 40" width="22" height="22"><circle cx="20" cy="20" r="17" fill="none" stroke="#040D1E" stroke-width="2.2"/><ellipse cx="20" cy="20" rx="8.5" ry="17" fill="none" stroke="#040D1E" stroke-width="1.5"/><line x1="3" y1="20" x2="37" y2="20" stroke="#040D1E" stroke-width="1.5"/><text x="20" y="26.5" text-anchor="middle" font-size="15" font-weight="900" font-family="Georgia,serif" fill="#040D1E">$</text></svg>
+      </div>
+      <div>
+        <div class="logo-text-main">Lucas Capital Management</div>
+        <div class="logo-text-sub">Invertir desde casa</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#galeria">La herramienta</a>
+      <a href="index.html#precios">Precios</a>
+      <a href="index.html#libro">El libro</a>
+      <a href="opinion.html" class="active">Opinión</a>
+      <a href="reformas.html">Reformas</a>
+      <a href="https://lucascapitalmanagement.com/retiro">Programa LCM</a>
+      <a href="index.html#solicitud" style="border-bottom:1px solid rgba(200,151,58,.35);padding-bottom:1px">Acceso individual</a>
+      <a href="app.html"><button class="btn-gold">🔐 Acceso alumnos</button></a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(200,151,58,.1);border:1px solid rgba(200,151,58,.3);border-radius:20px;padding:7px 18px;margin-bottom:20px">
+      <span style="font-size:12px;font-weight:700;color:#C8973A;letter-spacing:.1em;text-transform:uppercase">✍️ Blog · Análisis &amp; Opinión</span>
+    </div>
+    <h1 style="font-family:'Playfair Display',serif;font-size:44px;font-weight:700;color:#fff;margin-bottom:14px;line-height:1.15">Opinión &amp; <span style="color:#C8973A">Análisis</span></h1>
+    <p style="font-size:17px;color:rgba(255,255,255,.55);max-width:580px;line-height:1.65">Reflexiones sobre mercados, estrategia de inversión y gestión patrimonial. Publicaciones periódicas de <strong style="color:rgba(255,255,255,.8)">Lucas González</strong>.</p>
+  </div>
+</section>
+
+<!-- CONTENIDO -->
+<main style="padding:60px 0">
+  <div class="container">
+
+    <!-- FILTROS -->
+    <div class="filter-row">
+      <button class="filter-btn on" onclick="filterCat(this,'all')">Todos</button>
+      <button class="filter-btn" onclick="filterCat(this,'mercados')">📊 Mercados</button>
+      <button class="filter-btn" onclick="filterCat(this,'estrategia')">💡 Estrategia</button>
+      <button class="filter-btn" onclick="filterCat(this,'economia')">📰 Economía</button>
+      <button class="filter-btn" onclick="filterCat(this,'fiscal')">⚖️ Fiscal</button>
+    </div>
+
+    <!-- ARTÍCULO DESTACADO -->
+    <div class="featured" data-cat="economia" onclick="document.getElementById('art-29n').style.display='flex';document.body.style.overflow='hidden'" style="cursor:pointer">
+      <div class="featured-icon">🗳️</div>
+      <div>
+        <div class="featured-label">📌 Último artículo · Economía · 25 nov 2026</div>
+        <h2 class="featured-title">Elecciones Generales España 29N: La factura del ganador</h2>
+        <p class="featured-excerpt">El próximo domingo los españoles elegirán un nuevo Parlamento, pero quien salga investido no heredará solo un Gobierno: heredará una contabilidad. Mil días sin presupuestos, pensiones, deuda creciente y el aviso de Bruselas a cinco días de las elecciones.</p>
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+          <div class="author">
+            <div class="avatar">LG</div>
+            <div>
+              <div style="font-size:13px;font-weight:600;color:#fff">Lucas González</div>
+              <div style="font-size:11px;color:rgba(255,255,255,.4)">Coach financiero · LCM</div>
+            </div>
+          </div>
+          <span style="font-size:13px;font-weight:600;color:#C8973A">Leer artículo completo →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRID DE ARTÍCULOS -->
+    <div class="article-grid" id="article-grid">
+
+      <!-- ★ ARTÍCULO PUBLICADO #1 -->
+      <article class="article-card" data-cat="economia" onclick="document.getElementById('art-29n').style.display='flex';document.body.style.overflow='hidden'" style="cursor:pointer">
+        <div class="card-img" style="background:linear-gradient(135deg,rgba(123,143,245,.18),rgba(200,151,58,.08));font-size:42px">🗳️</div>
+        <div class="card-body">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:6px">
+            <span class="card-tag tag-economia" style="margin-bottom:0">📰 Economía</span>
+            <span style="font-size:11px;color:rgba(255,255,255,.35)">25 nov 2026</span>
+          </div>
+          <h3 class="card-title">Elecciones Generales España 29N: La factura del ganador</h3>
+          <p class="card-excerpt">Quien salga investido no heredará solo un Gobierno: heredará una contabilidad. Mil días sin presupuestos, pensiones, deuda y el aviso de Bruselas.</p>
+          <div class="card-meta">
+            <div class="author">
+              <div class="avatar">LG</div>
+              <span class="author-name">Lucas González</span>
+            </div>
+            <span class="read-more" style="color:#C8973A">Leer artículo →</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Artículo 2 (próximamente) -->
+      <article class="article-card coming-soon" data-cat="estrategia">
+        <div class="card-img">💡</div>
+        <div class="card-body">
+          <span class="card-tag tag-estrategia">💡 Estrategia</span>
+          <h3 class="card-title">Gestión del riesgo: el error más costoso del inversor particular</h3>
+          <p class="card-excerpt">Por qué el 90% de los inversores pierde dinero y cómo el control del riesgo marca la diferencia entre el éxito y el fracaso a largo plazo.</p>
+          <div class="card-meta">
+            <div class="author">
+              <div class="avatar">LG</div>
+              <span class="author-name">Lucas González</span>
+            </div>
+            <span class="read-more">En preparación →</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Artículo 2 -->
+      <article class="article-card coming-soon" data-cat="fiscal">
+        <div class="card-img">⚖️</div>
+        <div class="card-body">
+          <span class="card-tag tag-fiscal">⚖️ Fiscal</span>
+          <h3 class="card-title">Las nuevas medidas fiscales y cómo afectan a tu cartera de inversión</h3>
+          <p class="card-excerpt">Análisis del impacto de las últimas reformas tributarias sobre los instrumentos de ahorro más habituales: fondos, planes de pensiones y plusvalías.</p>
+          <div class="card-meta">
+            <div class="author">
+              <div class="avatar">LG</div>
+              <span class="author-name">Lucas González</span>
+            </div>
+            <span class="read-more">En preparación →</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Artículo 3 -->
+      <article class="article-card coming-soon" data-cat="mercados">
+        <div class="card-img">🌐</div>
+        <div class="card-body">
+          <span class="card-tag tag-mercados">📊 Mercados</span>
+          <h3 class="card-title">ETFs vs Fondos indexados: ¿cuál encaja mejor en tu perfil?</h3>
+          <p class="card-excerpt">Comparativa práctica entre ambos vehículos de inversión pasiva: fiscalidad, liquidez, costes y la estrategia óptima según tu horizonte temporal.</p>
+          <div class="card-meta">
+            <div class="author">
+              <div class="avatar">LG</div>
+              <span class="author-name">Lucas González</span>
+            </div>
+            <span class="read-more">En preparación →</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Artículo 4 -->
+      <article class="article-card coming-soon" data-cat="economia">
+        <div class="card-img">🏦</div>
+        <div class="card-body">
+          <span class="card-tag tag-economia">📰 Economía</span>
+          <h3 class="card-title">Plan de pensiones en 2026: ¿sigue siendo rentable o hay mejores alternativas?</h3>
+          <p class="card-excerpt">Con los cambios normativos recientes, ¿mantiene sentido el plan de pensiones para el inversor español? Análisis comparativo con PIAS, seguros y fondos.</p>
+          <div class="card-meta">
+            <div class="author">
+              <div class="avatar">LG</div>
+              <span class="author-name">Lucas González</span>
+            </div>
+            <span class="read-more">En preparación →</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Artículo 5 -->
+      <article class="article-card coming-soon" data-cat="estrategia">
+        <div class="card-img">📈</div>
+        <div class="card-body">
+          <span class="card-tag tag-estrategia">💡 Estrategia</span>
+          <h3 class="card-title">Cómo construí mi cartera desde cero: el Modelo Lucas Alpha paso a paso</h3>
+          <p class="card-excerpt">La historia detrás del método, los errores que cometí y cómo estructuré un sistema propio de inversión replicable desde casa con disciplina y paciencia.</p>
+          <div class="card-meta">
+            <div class="author">
+              <div class="avatar">LG</div>
+              <span class="author-name">Lucas González</span>
+            </div>
+            <span class="read-more">En preparación →</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Artículo 6 -->
+      <article class="article-card coming-soon" data-cat="mercados">
+        <div class="card-img">₿</div>
+        <div class="card-body">
+          <span class="card-tag tag-mercados">📊 Mercados</span>
+          <h3 class="card-title">Criptomonedas como activo de cartera: ¿cuánto peso darles?</h3>
+          <p class="card-excerpt">Una visión práctica y sin sesgos sobre el papel de Bitcoin y otros activos digitales en una cartera diversificada a largo plazo.</p>
+          <div class="card-meta">
+            <div class="author">
+              <div class="avatar">LG</div>
+              <span class="author-name">Lucas González</span>
+            </div>
+            <span class="read-more">En preparación →</span>
+          </div>
+        </div>
+      </article>
+
+    </div><!-- /article-grid -->
+
+    <!-- NEWSLETTER -->
+    <div class="newsletter">
+      <div style="font-size:36px;margin-bottom:16px">📬</div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#fff;margin-bottom:10px">Sé el primero en leer cada artículo</h3>
+      <p style="font-size:15px;color:rgba(255,255,255,.5);max-width:480px;margin:0 auto 28px;line-height:1.6">Los artículos se publican primero para los alumnos del Programa LCM y usuarios con acceso individual.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="index.html#solicitud"><button class="btn-gold" style="padding:14px 32px;font-size:15px">Solicitar acceso individual</button></a>
+        <a href="https://lucascapitalmanagement.com/retiro"><button style="background:transparent;border:1px solid rgba(200,151,58,.4);color:#C8973A;border-radius:10px;padding:14px 28px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s" onmouseover="this.style.background='rgba(200,151,58,.08)'" onmouseout="this.style.background='transparent'">Programa LCM →</button></a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:26px;height:26px;border-radius:7px;background:#C8973A;display:flex;align-items:center;justify-content:center">
+          <svg viewBox="0 0 40 40" width="16" height="16"><circle cx="20" cy="20" r="17" fill="none" stroke="#040D1E" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="14" font-weight="900" font-family="Georgia,serif" fill="#040D1E">$</text></svg>
+        </div>
+        <span style="font-size:12px;color:rgba(255,255,255,.35)">© 2026 Lucas Capital Management · Lucas González Sánchez</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="opinion.html">Opinión</a>
+        <a href="reformas.html">Reformas</a>
+        <a href="index.html#solicitud">Contacto</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL ARTÍCULO 29N -->
+<div id="art-29n" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(2,8,16,.96);z-index:500;overflow-y:auto;padding:40px 20px;align-items:flex-start;justify-content:center">
+  <div style="max-width:760px;width:100%;margin:0 auto;position:relative">
+    <!-- Cerrar -->
+    <button onclick="document.getElementById('art-29n').style.display='none';document.body.style.overflow=''" style="position:fixed;top:20px;right:24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:50%;width:40px;height:40px;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10">✕</button>
+
+    <!-- Cabecera -->
+    <div style="margin-bottom:32px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap">
+        <span style="background:rgba(123,143,245,.12);border:1px solid rgba(123,143,245,.3);color:#7B8FF5;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px">📰 Economía</span>
+        <span style="font-size:12px;color:rgba(255,255,255,.35)">25 de noviembre de 2026</span>
+      </div>
+      <h1 style="font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:#fff;line-height:1.2;margin-bottom:16px">La factura que espera al ganador del 29-N</h1>
+      <div style="display:flex;align-items:center;gap:10px;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08)">
+        <div style="width:36px;height:36px;border-radius:50%;background:#C8973A;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#040D1E;flex-shrink:0">LG</div>
+        <div>
+          <div style="font-size:14px;font-weight:600;color:#fff">Lucas González</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.4)">Coach financiero · Lucas Capital Management</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cuerpo del artículo -->
+    <div style="font-size:16px;color:rgba(255,255,255,.75);line-height:1.85">
+
+      <p style="margin-bottom:20px">El próximo domingo los españoles elegirán un nuevo Parlamento, pero quien salga investido no heredará solo un Gobierno: heredará una contabilidad. España lleva desde 2024 funcionando con los Presupuestos Generales aprobados para 2023, prorrogados ejercicio tras ejercicio. En septiembre se cumplieron mil días sin cuentas nuevas. En campaña se ha hablado mucho de bloques, pactos y vetos, y muy poco de esa factura.</p>
+
+      <p style="margin-bottom:20px">Prorrogar un presupuesto no es ilegal ni paraliza el Estado. Las nóminas se pagan, las pensiones se revalorizan y los servicios funcionan. El problema es más sutil. Un presupuesto prorrogado es la fotografía de un país que ya no existe, con los ingresos, los precios y las prioridades de hace tres años. Para cuadrar la realidad con esa fotografía, el Gobierno recurre a modificaciones de crédito, decretos y vías extraordinarias. Según la Cuenta General del Estado de 2025, el crédito previsto en las cuentas prorrogadas para amortizar deuda a largo plazo era de 91.000 millones, cuando los vencimientos sumaban 113.500. La diferencia, 22.500 millones, se cubrió emitiendo más deuda. Nada de esto es irregular, pero todo escapa al debate que da sentido a un presupuesto: decidir, a la vista de todos, en qué se gasta y a qué se renuncia.</p>
+
+      <p style="margin-bottom:20px">Bruselas lo ha visto. El 24 de noviembre, a cinco días de las elecciones, la Comisión Europea advirtió de que España corre el riesgo de incumplir la senda de gasto pactada con la UE. Según las cifras publicadas, el desvío acumulado alcanzaría el 0,9% del PIB en 2026, por encima del margen del 0,6%, y el 1,3% en 2027. Si los datos oficiales lo confirman en primavera, la Comisión podría preparar el informe que abre la puerta a un procedimiento por déficit excesivo. No por el déficit, que está por debajo del 3%, sino por una deuda que sigue muy por encima del 60% del PIB. Las fuentes comunitarias recordaron que gobernar sin presupuesto no vulnera las normas europeas, pero que una buena práctica exigiría tenerlo. Es una manera diplomática de decir que nadie sabe muy bien cuál es el plan.</p>
+
+      <p style="margin-bottom:20px">Dentro de esa factura hay una partida que ningún Gobierno puede eludir: las pensiones. La AIReF certificó en mayo que España cumple formalmente la regla de gasto que la reforma de 2023 se impuso a sí misma, pero añadió que eso no garantiza la sostenibilidad. Proyecta que el gasto en pensiones alcance el 16,4% del PIB en 2050 y que el envejecimiento empuje la deuda hasta el 123% del PIB a políticas constantes. Dos tercios de ese aumento los explicarían las pensiones. Y el ajuste no recaería tanto en cotizaciones como en transferencias crecientes del Estado a la Seguridad Social, es decir, en impuestos, en más deuda o en recortes de otras partidas.</p>
+
+      <p style="margin-bottom:20px">Conviene ser preciso sobre el origen del problema. El sistema español es de reparto: las cotizaciones de quienes trabajan pagan las pensiones de quienes se han jubilado. Ese diseño no es malo en sí mismo, y funcionó mientras la pirámide demográfica era ancha en la base. Lo que lo tensiona es la suma de una natalidad muy baja, una esperanza de vida creciente, la jubilación del baby boom y unas pensiones generosas en relación con el último salario. Por eso, como ya defendí en mi libro, creo que la salida pasa por transitar de forma progresiva hacia un sistema con un pilar de capitalización: que cada trabajador acumule en una cuenta a su nombre parte de lo que aporta, y que ese ahorro se invierta y crezca durante su vida laboral.</p>
+
+      <p style="margin-bottom:20px">Sé que es la propuesta más fácil de enunciar y la más difícil de ejecutar. La objeción principal es seria y hay que decirla en voz alta: durante la transición, una generación tiene que pagar dos veces, las pensiones de los jubilados actuales y su propio ahorro. Ese coste no desaparece; se financia con deuda, con impuestos o con un cambio muy lento. Por eso la transición debe ser gradual, empezar por los más jóvenes y apoyarse en modelos que ya existen, como el sueco, que combina reparto con una parte capitalizada. España dio un paso tímido con los planes de pensiones de empleo simplificados. Es poco, pero señala el camino. Y no hacer nada también tiene un coste, aunque no figure en ninguna factura: lo pagarán, en pensiones más bajas o impuestos más altos, quienes hoy tienen treinta años.</p>
+
+      <p style="margin-bottom:20px">La segunda reforma tiene que ver con el gasto. Cuando se reclama una ley que impida su uso indiscriminado, conviene recordar que esa ley ya existe. El artículo 135 de la Constitución y la Ley de Estabilidad Presupuestaria de 2012 consagran la estabilidad y una regla de gasto. El problema no es la falta de normas, sino que se suspenden, se interpretan con generosidad o se sortean con prórrogas. Lo que falta no es otra ley, sino hacer cumplir las que hay: una AIReF con más capacidad de exigir, la obligación efectiva de presentar presupuestos y un coste político real para quien no lo haga.</p>
+
+      <p style="margin-bottom:20px">Añado una tercera reforma, que es una opinión personal: la ley electoral. Las últimas legislaturas han dependido de mayorías frágiles y de socios minoritarios con capacidad de bloqueo, lo que hace casi imposible aprobar presupuestos o pactar reformas de largo plazo. Soy partidario de estudiar un sistema de doble vuelta. No una presidencial, porque en España no elegimos directamente al presidente del Gobierno, sino al estilo de las legislativas francesas: una segunda ronda allí donde ningún candidato obtenga la mayoría. Tiene inconvenientes, como el riesgo de sobrerrepresentar a los grandes partidos o la necesidad de rediseñar las circunscripciones, y exigiría reformar la ley electoral por mayoría absoluta. Pero obligaría a los partidos a buscar votantes en el centro antes de las elecciones, y no socios en los despachos después.</p>
+
+      <p style="margin-bottom:20px">Queda el contexto que lo cambia todo: el dinero barato se acabó. El BCE ha subido los tipos dos veces este año, hasta situar la facilidad de depósito en el 2,50%, y ya no reinvierte los bonos que vencen en sus carteras de compras de deuda. La mayoría de analistas espera otra subida en diciembre, aunque eso es todavía una previsión. Para un país endeudado la traducción es directa: el gasto en intereses superó los 40.000 millones en 2025, y Funcas prevé 43.500 en 2026 y más de 63.000 en 2031. Conviene que se sepa: los intereses de la deuda también van en los presupuestos, aunque no haya presupuestos.</p>
+
+      <p style="margin-bottom:32px">La prima de riesgo ronda hoy los 60 puntos básicos, lejos de los sobresaltos de 2012, y casi nadie la nombra. Pero esa calma se debe en buena parte a que la economía española crece más que la media europea, y no conviene confundirla con una garantía. Si el crecimiento se modera y el BCE ya no ejerce de comprador de referencia, los mercados volverán a mirar nuestras cuentas con lupa, y esa palabra olvidada volverá a los telediarios.</p>
+
+      <p style="margin-bottom:40px;font-style:italic;color:rgba(255,255,255,.55)">Por mi experiencia como inversor sé que los ajustes rara vez llegan por convicción; suelen llegar por necesidad. Ningún Gobierno recorta por gusto. Gane quien gane el domingo, la cuestión no es si habrá que ajustar, sino si se hará con un plan propio o con uno dictado por los mercados y por Bruselas.</p>
+
+      <!-- FUENTES -->
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px;margin-top:8px">
+        <h3 style="font-size:13px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px">Fuentes</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px">
+          <li><a href="https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2026/051026-sanchez-convocatoria-elecciones.aspx" target="_blank" rel="noopener" style="font-size:13px;color:#7B8FF5;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#C8973A'" onmouseout="this.style.color='#7B8FF5'">↗ Convocatoria de elecciones para el 29-N — La Moncloa (5 oct 2026)</a></li>
+          <li><a href="https://es.euronews.com/2026/09/27/espana-cumple-1000-dias-sin-nuevos-presupuestos-es-un-hurto-a-los-ciudadanos" target="_blank" rel="noopener" style="font-size:13px;color:#7B8FF5;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#C8973A'" onmouseout="this.style.color='#7B8FF5'">↗ Mil días sin presupuestos — Euronews (27 sep 2026)</a></li>
+          <li><a href="https://www.elindependiente.com/economia/2026/08/05/falta-presupuestos-obliga-gobierno-pedir-22500-millones-creditos-pagar-deuda-publica/amp/" target="_blank" rel="noopener" style="font-size:13px;color:#7B8FF5;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#C8973A'" onmouseout="this.style.color='#7B8FF5'">↗ 22.500 M€ de deuda para cubrir amortizaciones — El Independiente (5 ago 2026)</a></li>
+          <li><a href="https://theobjective.com/economia/2026-11-24/bruselas-sancion-espana-gasto-publico/" target="_blank" rel="noopener" style="font-size:13px;color:#7B8FF5;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#C8973A'" onmouseout="this.style.color='#7B8FF5'">↗ Aviso de la Comisión Europea (0,9% PIB) — The Objective (24 nov 2026)</a></li>
+          <li><a href="https://www.elespanol.com/invertia/economia/empleo/20260529/airef-aprueba-prevision-gasto-pensiones-gobierno-alerta-deuda-publica-subira-pib/1003744265208_0.html" target="_blank" rel="noopener" style="font-size:13px;color:#7B8FF5;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#C8973A'" onmouseout="this.style.color='#7B8FF5'">↗ AIReF: pensiones al 16,4% del PIB en 2050 — El Español (29 may 2026)</a></li>
+          <li><a href="https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp261029~9a493adf17.es.html" target="_blank" rel="noopener" style="font-size:13px;color:#7B8FF5;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#C8973A'" onmouseout="this.style.color='#7B8FF5'">↗ BCE: tipos al 2,50%, sin reinversión — BCE (29 oct 2026)</a></li>
+          <li><a href="https://www.vozpopuli.com/economia/macroeconomia/el-gasto-en-intereses-de-la-deuda-rompe-en-espana-la-barrera-de-los-40000-millones-por-primera-vez.html" target="_blank" rel="noopener" style="font-size:13px;color:#7B8FF5;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#C8973A'" onmouseout="this.style.color='#7B8FF5'">↗ Intereses de deuda superan 40.000 M€ — Vozpópuli (27 abr 2026)</a></li>
+          <li><a href="https://www.euribordiario.es/prima-riesgo" target="_blank" rel="noopener" style="font-size:13px;color:#7B8FF5;text-decoration:none;transition:color .2s" onmouseover="this.style.color='#C8973A'" onmouseout="this.style.color='#7B8FF5'">↗ Prima de riesgo 60 pb — EuriborDiario (20 nov 2026)</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /cuerpo -->
+
+    <!-- Footer del modal -->
+    <div style="margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:40px;height:40px;border-radius:50%;background:#C8973A;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;color:#040D1E">LG</div>
+        <div>
+          <div style="font-size:14px;font-weight:600;color:#fff">Lucas González</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.4)">Coach financiero · <a href="index.html" style="color:#C8973A">lucascapitalmanagement.com</a></div>
+        </div>
+      </div>
+      <button onclick="document.getElementById('art-29n').style.display='none';document.body.style.overflow=''" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.6);border-radius:10px;padding:10px 20px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit">← Volver a Opinión</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function filterCat(btn, cat){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('#article-grid .article-card,[data-cat]').forEach(el=>{
+    if(cat==='all' || el.dataset.cat===cat){
+      el.style.display='';
+    } else {
+      el.style.display='none';
+    }
+  });
+  // Also show/hide featured
+  var f=document.querySelector('.featured[data-cat]');
+  if(f) f.style.display=(cat==='all'||f.dataset.cat===cat)?'':'none';
+}
+</script>
+</body>
+</html>
