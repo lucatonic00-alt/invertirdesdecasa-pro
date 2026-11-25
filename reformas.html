@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cuenta Financia Europa · Reforma del Ahorro e Inversión · Lucas Capital Management</title>
+<meta name="description" content="Todo lo que necesitas saber sobre la nueva Cuenta Financia Europa: fiscalidad, límites, activos elegibles y cómo te afecta como inversor particular.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{max-width:100%;overflow-x:hidden}
+body{font-family:'Inter',system-ui,sans-serif;background:#040D1E;color:#fff;line-height:1.5}
+a{text-decoration:none;color:inherit}
+.container{max-width:1060px;margin:0 auto;padding:0 32px;width:100%}
+img,svg,table{max-width:100%}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(4,13,30,.96);backdrop-filter:blur(14px);border-bottom:.5px solid rgba(200,151,58,.13);width:100%;max-width:100%}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 32px;gap:24px;max-width:100%;overflow:hidden}
+.logo{display:flex;align-items:center;gap:10px;min-width:0;flex-shrink:1}
+.logo-icon{width:34px;height:34px;border-radius:9px;background:#C8973A;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-text-main{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.logo-text-sub{font-size:9px;color:rgba(200,151,58,.65);letter-spacing:.12em;text-transform:uppercase;margin-top:1px;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:18px}
+.nav-links a{font-size:13px;color:rgba(255,255,255,.55);font-weight:500;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:#C8973A}
+.btn-gold{background:#C8973A;color:#040D1E;border:none;border-radius:10px;padding:9px 20px;font-weight:700;font-size:13px;cursor:pointer;font-family:inherit;transition:opacity .2s}
+.btn-gold:hover{opacity:.85}
+
+/* HERO */
+.page-hero{padding:72px 0 56px;background:linear-gradient(160deg,#060F28 0%,#040D1E 100%);border-bottom:.5px solid rgba(123,143,245,.12);width:100%;max-width:100%;overflow:hidden}
+
+/* LAYOUT */
+.content-wrap{display:grid;grid-template-columns:1fr 230px;gap:48px;align-items:start;padding:60px 0 80px}
+
+/* TOC */
+.toc{position:sticky;top:80px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:22px}
+.toc-title{font-size:10px;font-weight:700;color:rgba(255,255,255,.35);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.toc a{display:block;font-size:12.5px;color:rgba(255,255,255,.45);padding:5px 0 5px 12px;border-left:2px solid transparent;margin-bottom:2px;transition:all .2s;line-height:1.4}
+.toc a:hover,.toc a.on{color:#C8973A;border-left-color:#C8973A}
+.toc-sep{margin:14px 0;border:none;border-top:1px solid rgba(255,255,255,.07)}
+
+/* ARTICLE BODY */
+.art-body{min-width:0;overflow-x:hidden;width:100%}
+.art-body h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#fff;margin:48px 0 16px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.07)}
+.art-body h2:first-child{margin-top:0}
+.art-body p{font-size:16px;color:rgba(255,255,255,.72);line-height:1.85;margin-bottom:16px}
+.art-body p:last-child{margin-bottom:0}
+.art-body a{color:#C8973A;border-bottom:1px solid rgba(200,151,58,.35);transition:border-color .2s}
+.art-body a:hover{border-color:#C8973A}
+.art-body ul{margin:0 0 20px 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.art-body ul li{font-size:15px;color:rgba(255,255,255,.68);line-height:1.75;padding-left:20px;position:relative}
+.art-body ul li::before{content:'·';position:absolute;left:0;color:#C8973A;font-size:20px;line-height:1.3}
+
+/* CARDS DE DATOS */
+.data-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin:24px 0}
+.data-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:20px;text-align:center}
+.data-card .num{font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:700;color:#C8973A;line-height:1.1;margin-bottom:6px}
+.data-card .label{font-size:12px;color:rgba(255,255,255,.45);line-height:1.4}
+
+/* HIGHLIGHT / NOTA */
+.nota{background:rgba(200,151,58,.06);border-left:3px solid #C8973A;border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+.nota p{font-size:14px;color:rgba(255,255,255,.65);margin:0;line-height:1.65}
+.nota strong{color:#C8973A}
+
+.nota-azul{background:rgba(123,143,245,.06);border-left:3px solid #7B8FF5;border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+.nota-azul p{font-size:14px;color:rgba(255,255,255,.65);margin:0;line-height:1.65}
+.nota-azul strong{color:#7B8FF5}
+
+/* COMPARATIVA TABLE */
+.comp-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.comp-table th{background:rgba(200,151,58,.1);color:#C8973A;font-weight:700;padding:12px 16px;text-align:left;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.comp-table td{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.06);color:rgba(255,255,255,.68);vertical-align:top;line-height:1.55}
+.comp-table tr:last-child td{border-bottom:none}
+.comp-table td:first-child{font-weight:600;color:rgba(255,255,255,.85);white-space:nowrap}
+.comp-table .yes{color:#00D084;font-weight:700}
+.comp-table .no{color:rgba(255,255,255,.3)}
+.comp-table .par{color:#C8973A}
+
+/* TIMELINE */
+.timeline{margin:24px 0;display:flex;flex-direction:column;gap:0}
+.tl-item{display:flex;gap:20px;padding-bottom:28px;position:relative}
+.tl-item:last-child{padding-bottom:0}
+.tl-left{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:28px}
+.tl-dot{width:14px;height:14px;border-radius:50%;border:2px solid;flex-shrink:0;margin-top:3px}
+.tl-dot.done{background:#00D084;border-color:#00D084}
+.tl-dot.active{background:#C8973A;border-color:#C8973A}
+.tl-dot.pending{background:transparent;border-color:#7B8FF5}
+.tl-line{flex:1;width:1.5px;background:rgba(255,255,255,.1);margin-top:4px}
+.tl-item:last-child .tl-line{display:none}
+.tl-content{padding-top:0}
+.tl-date{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.tl-title{font-size:15px;font-weight:600;color:#fff;margin-bottom:4px}
+.tl-desc{font-size:13px;color:rgba(255,255,255,.45);line-height:1.55}
+
+/* STATUS BADGE */
+.status-pill{display:inline-flex;align-items:center;gap:7px;border-radius:20px;padding:6px 14px;font-size:12px;font-weight:700;letter-spacing:.06em}
+
+/* PILL BADGE */
+.pill{display:inline-flex;align-items:center;gap:6px;background:rgba(200,151,58,.1);border:1px solid rgba(200,151,58,.3);border-radius:20px;padding:6px 14px;font-size:11px;color:#C8973A;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+
+/* CTA */
+.cta-box{background:linear-gradient(135deg,rgba(200,151,58,.08),rgba(200,151,58,.02));border:1px solid rgba(200,151,58,.2);border-radius:18px;padding:36px;text-align:center;margin-top:48px}
+
+/* DISCLAIMER */
+.disclaimer{background:rgba(255,255,255,.02);border-left:2px solid rgba(255,255,255,.1);border-radius:0 10px 10px 0;padding:14px 18px;margin-top:36px}
+.disclaimer p{font-size:12px;color:rgba(255,255,255,.3);margin:0;line-height:1.6}
+
+/* TABLET */
+@media(max-width:900px){
+  .content-wrap{grid-template-columns:1fr;padding:36px 0 56px}
+  .toc{display:none}
+  .nav-links{display:none}
+  .nav-inner{padding:10px 16px}
+  .container{padding:0 16px}
+  .page-hero{padding:36px 0 28px}
+  .data-grid{grid-template-columns:repeat(2,1fr)}
+  .comp-table{font-size:12px}
+  .comp-table th,.comp-table td{padding:8px 10px;white-space:normal;word-break:break-word}
+  .art-body h2{font-size:20px;margin:36px 0 14px}
+  .cta-box{padding:24px 16px}
+}
+/* MÓVIL */
+@media(max-width:600px){
+  .container{padding:0 14px}
+  .data-grid{grid-template-columns:1fr}
+  .data-card .num{font-size:24px}
+  /* Tabla comparativa — scroll horizontal */
+  .comp-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .comp-table{min-width:460px;font-size:12px}
+  /* Grids 2 col → 1 col */
+  .subcuentas-grid{grid-template-columns:1fr!important}
+  .reinversion-grid{grid-template-columns:1fr!important}
+  /* Botones CTA apilados */
+  .btn-wrap{flex-direction:column!important;align-items:stretch!important}
+  .btn-wrap a{width:100%}
+  .btn-wrap button{width:100%!important;box-sizing:border-box}
+  /* Valoración Lucas */
+  .lcm-quote{padding:22px 16px!important}
+  /* Notas y texto */
+  .art-body p,.art-body ul li{font-size:15px}
+  .nota p,.nota-azul p{font-size:13px}
+  /* Párrafo hero */
+  .hero-desc{max-width:100%!important;font-size:15px!important}
+  /* Badges hero */
+  .status-pill,.pill{font-size:11px!important;padding:5px 10px!important}
+}
+
+/* FOOTER */
+footer{background:#020810;border-top:.5px solid rgba(200,151,58,.1);padding:32px 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{font-size:12px;color:rgba(255,255,255,.3);transition:color .2s}
+.footer-links a:hover{color:#C8973A}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 40 40" width="22" height="22"><circle cx="20" cy="20" r="17" fill="none" stroke="#040D1E" stroke-width="2.2"/><ellipse cx="20" cy="20" rx="8.5" ry="17" fill="none" stroke="#040D1E" stroke-width="1.5"/><line x1="3" y1="20" x2="37" y2="20" stroke="#040D1E" stroke-width="1.5"/><text x="20" y="26.5" text-anchor="middle" font-size="15" font-weight="900" font-family="Georgia,serif" fill="#040D1E">$</text></svg>
+      </div>
+      <div>
+        <div class="logo-text-main">Lucas Capital Management</div>
+        <div class="logo-text-sub">Invertir desde casa</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#galeria">La herramienta</a>
+      <a href="index.html#precios">Precios</a>
+      <a href="index.html#libro">El libro</a>
+      <a href="opinion.html">Opinión</a>
+      <a href="reformas.html" class="active">Reformas</a>
+      <a href="https://lucascapitalmanagement.com/retiro">Programa LCM</a>
+      <a href="index.html#solicitud" style="border-bottom:1px solid rgba(200,151,58,.35);padding-bottom:1px">Acceso individual</a>
+      <a href="app.html"><button class="btn-gold">🔐 Acceso alumnos</button></a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px;flex-wrap:wrap">
+      <span class="pill">📋 Real Decreto-ley 29/2026</span>
+      <span class="status-pill" style="background:rgba(0,208,132,.1);border:1px solid rgba(0,208,132,.3);color:#00D084">✓ En vigor desde 8 oct 2026</span>
+      <span class="status-pill" style="background:rgba(200,151,58,.1);border:1px solid rgba(200,151,58,.3);color:#C8973A">⏳ Pendiente de comercialización</span>
+    </div>
+    <h1 style="font-family:'Playfair Display',serif;font-size:clamp(26px,5vw,42px);font-weight:700;color:#fff;line-height:1.2;margin-bottom:16px">Cuenta <span style="color:#C8973A">Financia Europa</span></h1>
+    <p class="hero-desc" style="font-size:clamp(15px,2.2vw,18px);color:rgba(255,255,255,.55);max-width:620px;line-height:1.7;margin-bottom:28px">La nueva cuenta de ahorro e inversión aprobada en España: diferimiento fiscal, exención a partir del 5.º año y acceso a acciones y fondos europeos desde una sola cuenta.</p>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.4)">
+        <span style="color:#C8973A">✍️</span> Análisis por <strong style="color:rgba(255,255,255,.7)">Lucas González</strong> · Lucas Capital Management
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENIDO -->
+<div class="container">
+  <div class="content-wrap">
+
+    <!-- CUERPO -->
+    <article class="art-body">
+
+      <!-- QUÉ ES -->
+      <h2 id="que-es">¿Qué es la Cuenta Financia Europa?</h2>
+      <p>Es el nuevo producto de ahorro e inversión creado por el Real Decreto-ley 29/2026, aprobado el 6 de octubre y en vigor desde el 8. Se trata de un contrato entre un particular y una entidad financiera que funciona como una cuenta de valores con una cuenta de efectivo asociada, en la que solo pueden entrar acciones y fondos vinculados a la Unión Europea y al Espacio Económico Europeo (EEE).</p>
+      <div class="nota-azul">
+        <p><strong>El EEE</strong> está formado por los países de la UE más Noruega, Islandia y Liechtenstein. Actualmente quedan fuera Reino Unido y Suiza. El nombre <em>Financia Europa</em> está reservado por ley: solo pueden llamarse así los productos que cumplan todos los requisitos de la norma.</p>
+      </div>
+      <p>La idea procede de la etiqueta <em>Finance Europe</em>, que España presentó en 2025 junto a otros seis países, y de la recomendación de la Comisión Europea de crear cuentas de ahorro e inversión dentro de la estrategia de la Unión de Ahorros e Inversiones.</p>
+
+      <!-- CIFRAS CLAVE -->
+      <div class="data-grid">
+        <div class="data-card">
+          <div class="num">150.000€</div>
+          <div class="label">Límite máximo de aportaciones pendientes de recuperar</div>
+        </div>
+        <div class="data-card">
+          <div class="num">10.000€</div>
+          <div class="label">Ganancia exenta total (a partir del 5.º año, límite de por vida)</div>
+        </div>
+        <div class="data-card">
+          <div class="num">20%</div>
+          <div class="label">Exclusión adicional sobre la ganancia restante tras los 10.000€</div>
+        </div>
+        <div class="data-card">
+          <div class="num">1.500€</div>
+          <div class="label">Máximo permitido en la subcuenta de efectivo en cada momento</div>
+        </div>
+      </div>
+
+      <!-- QUIÉN PUEDE ABRIRLA -->
+      <h2 id="quien">¿Quién puede abrirla y cuánto se puede aportar?</h2>
+      <p>Puede abrirla cualquier persona física que sea contribuyente del IRPF. Cada contribuyente solo puede tener <strong style="color:#fff">una cuenta</strong>, que es individual y no se puede ceder ni transmitir. Antes de abrirla, la entidad pedirá una declaración responsable de que no se tiene otra.</p>
+      <p>El límite es de <strong style="color:#C8973A">150.000 euros</strong> de aportaciones pendientes de recuperar. No hay tope anual. Este límite se refiere al dinero aportado que sigue dentro de la cuenta: cuando el titular retira dinero, la parte correspondiente a aportaciones recuperadas libera hueco para volver a aportar.</p>
+      <div class="nota">
+        <p><strong>Importante:</strong> Las aportaciones deben hacerse en dinero desde la cuenta bancaria de contrapartida vinculada. No se pueden traspasar acciones o fondos que ya se tengan fuera de la cuenta.</p>
+      </div>
+
+      <!-- FISCALIDAD -->
+      <h2 id="fiscalidad">¿Cómo tributa la Cuenta Financia Europa?</h2>
+      <p>La fiscalidad tiene dos particularidades que la convierten en uno de los productos más eficientes disponibles para el inversor español:</p>
+
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;margin:24px 0;display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;gap:16px">
+          <div style="width:36px;height:36px;border-radius:10px;background:rgba(0,208,132,.12);border:1px solid rgba(0,208,132,.25);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">⏱</div>
+          <div>
+            <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:6px">1. Diferimiento fiscal</div>
+            <p style="font-size:14px;color:rgba(255,255,255,.6);line-height:1.7;margin:0">Las ganancias y pérdidas al vender o reembolsar activos dentro de la cuenta <strong style="color:#fff">no se declaran en el IRPF hasta que el titular retira dinero</strong>. Puedes vender una acción y comprar otra, o mover de un ETF a un fondo, sin pasar por Hacienda. Esta ventaja, antes solo disponible para traspasos entre fondos de inversión, se extiende ahora también a acciones y ETFs.</p>
+          </div>
+        </div>
+        <div style="border-top:1px solid rgba(255,255,255,.07);padding-top:20px;display:flex;gap:16px">
+          <div style="width:36px;height:36px;border-radius:10px;background:rgba(200,151,58,.12);border:1px solid rgba(200,151,58,.25);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">⭐</div>
+          <div>
+            <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:6px">2. Exención a partir del 5.º año</div>
+            <p style="font-size:14px;color:rgba(255,255,255,.6);line-height:1.7;margin:0 0 10px">Cuando se retira dinero, la ganancia atribuible a aportaciones con más de 5 años en la cuenta tiene dos ventajas:</p>
+            <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px">
+              <li style="font-size:14px;color:rgba(255,255,255,.65);padding-left:18px;position:relative;line-height:1.6"><span style="position:absolute;left:0;color:#C8973A;font-weight:700">→</span> El <strong style="color:#C8973A">100% de la ganancia queda exento hasta 10.000€</strong> por contribuyente (límite total de por vida, no recuperable).</li>
+              <li style="font-size:14px;color:rgba(255,255,255,.65);padding-left:18px;position:relative;line-height:1.6"><span style="position:absolute;left:0;color:#C8973A;font-weight:700">→</span> De la ganancia restante, se excluye de gravamen el <strong style="color:#C8973A">20%</strong>. El 80% restante tributa en la base del ahorro (tipos del 19% al 30%).</li>
+            </ul>
+            <p style="font-size:13px;color:rgba(255,255,255,.4);margin:10px 0 0;line-height:1.6">La ley considera que el dinero retirado corresponde primero a las aportaciones más antiguas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nota">
+        <p><strong>Si se retira antes de 5 años:</strong> la ganancia tributa con normalidad en la base del ahorro, sin ninguna exención. Las pérdidas de una retirada parcial no se declaran en ese momento: se restan de las ganancias de retiradas siguientes y, si queda saldo, se integran al cerrar la cuenta.</p>
+      </div>
+
+      <!-- DIVIDENDOS -->
+      <h2 id="dividendos">¿Cómo tributan los dividendos?</h2>
+      <p>Los dividendos quedan <strong style="color:#fff">fuera del régimen especial</strong>. Tributan como cualquier dividendo y se ingresan directamente en la cuenta bancaria de contrapartida, no dentro de la cuenta de inversión.</p>
+
+      <!-- QUÉ SE PUEDE INVERTIR -->
+      <h2 id="activos">¿Qué se puede invertir en la cuenta?</h2>
+      <p>Solo pueden entrar dos tipos de activos:</p>
+      <ul>
+        <li><strong style="color:#fff">Acciones cotizadas</strong> en mercados regulados o sistemas multilaterales de negociación, de compañías con domicilio social, administración central o centro principal de actividad en la UE o el EEE, incluidos sus derechos de suscripción preferente.</li>
+        <li><strong style="color:#fff">Fondos de inversión de carácter financiero</strong>, incluidos ETFs, inscritos en el Registro de IIC Elegibles de la CNMV.</li>
+      </ul>
+
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:22px;margin:20px 0">
+        <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px">Requisitos de los fondos elegibles</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(200,151,58,.1);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:700;color:#C8973A;flex-shrink:0">70%</div>
+            <span style="font-size:14px;color:rgba(255,255,255,.65)">mínimo de la cartera invertido en activos vinculados al EEE</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(200,151,58,.1);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:700;color:#C8973A;flex-shrink:0">50%</div>
+            <span style="font-size:14px;color:rgba(255,255,255,.65)">mínimo en renta variable</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(200,151,58,.1);display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:700;color:#C8973A;flex-shrink:0">35%</div>
+            <span style="font-size:14px;color:rgba(255,255,255,.65)">mínimo en renta variable del EEE</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="nota">
+        <p><strong>Quedan excluidos:</strong> SOCIMIs, SICAVs, derivados y renta fija directa. Las entidades tampoco pueden conceder préstamos para operar dentro de la cuenta.</p>
+      </div>
+      <p>Si un activo deja de cumplir los requisitos por causas ajenas al titular (una operación societaria, por ejemplo), la entidad debe avisarle. Desde ese aviso, hay <strong style="color:#fff">tres meses</strong> para corregirlo. Si no se corrige, la entidad vende el activo y el importe sale de la cuenta como retirada parcial.</p>
+
+      <!-- CÓMO FUNCIONA -->
+      <h2 id="funcionamiento">¿Cómo funciona por dentro?</h2>
+      <p>La cuenta se divide en <strong style="color:#fff">dos subcuentas</strong>:</p>
+      <div class="subcuentas-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0">
+        <div style="background:rgba(123,143,245,.06);border:1px solid rgba(123,143,245,.2);border-radius:14px;padding:20px">
+          <div style="font-size:20px;margin-bottom:10px">📊</div>
+          <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:6px">Subcuenta de valores</div>
+          <div style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6">Donde se custodian las acciones y los fondos inscritos en el registro de la CNMV.</div>
+        </div>
+        <div style="background:rgba(0,208,132,.05);border:1px solid rgba(0,208,132,.18);border-radius:14px;padding:20px">
+          <div style="font-size:20px;margin-bottom:10px">💶</div>
+          <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:6px">Subcuenta de efectivo</div>
+          <div style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6">En euros. <strong style="color:#00D084">Máximo 1.500€.</strong> Si se supera, el titular tiene 3 meses para invertir o retirar el exceso.</div>
+        </div>
+      </div>
+      <ul>
+        <li>Los gastos de mantenimiento, custodia y gestión se cargan en la cuenta de <strong style="color:#fff">contrapartida</strong>, no dentro de la cuenta de inversión.</li>
+        <li>La cuenta se puede <strong style="color:#fff">cambiar de entidad una vez por año natural</strong> con todos sus activos. El cambio no cuenta como retirada ni como nueva aportación, y se conserva la antigüedad del dinero. La entidad de origen tiene 1 día hábil para verificar la solicitud y hasta 10 días hábiles para completar la movilización.</li>
+      </ul>
+
+      <!-- INCUMPLIMIENTOS -->
+      <h2 id="incumplimientos">¿Qué ocurre si se incumplen los requisitos o fallece el titular?</h2>
+      <ul>
+        <li>Si se incumple algún requisito (por ejemplo, superar el límite de aportaciones), <strong style="color:#fff">se pierde el régimen especial desde ese momento</strong>. A efectos fiscales se considera que se ha retirado todo el dinero, y la ganancia acumulada tributa sin la exención del quinto año.</li>
+        <li>En caso de <strong style="color:#fff">fallecimiento</strong> o pérdida de la condición de contribuyente del IRPF, se integran en la base del ahorro las ganancias acumuladas no declaradas. Los herederos pueden mantener los activos, pero ya fuera del régimen de la cuenta.</li>
+      </ul>
+
+      <!-- MODALIDAD REINVERSIÓN -->
+      <h2 id="reinversion">La modalidad de reinversión (vinculada a vivienda)</h2>
+      <p>El decreto crea también la <strong style="color:#fff">Cuenta Financia Europa Reinversión</strong>, compatible con la cuenta general. Está ligada a una exención para quien venda, hasta el 31 de diciembre de 2027, una vivienda que haya estado vacía de forma continuada y sin causa justificada durante los dos años anteriores, a entes públicos dedicados a vivienda social y asequible, con precio inferior a 800.000 euros.</p>
+      <div class="reinversion-grid data-grid" style="grid-template-columns:repeat(2,1fr);margin:20px 0">
+        <div class="data-card" style="text-align:left;padding:20px">
+          <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">Precio ≤ 200.000€</div>
+          <div class="num" style="font-size:22px;margin-bottom:4px">100%</div>
+          <div class="label">Ganancia exenta</div>
+        </div>
+        <div class="data-card" style="text-align:left;padding:20px">
+          <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">200.000€ – 800.000€</div>
+          <div class="num" style="font-size:22px;margin-bottom:4px;color:#7B8FF5">Parcial</div>
+          <div class="label">Exención decreciente. La parte no exenta puede reinvertirse en la cuenta de reinversión (plazo: 6 meses)</div>
+        </div>
+      </div>
+      <div class="nota">
+        <p><strong>Diferencias respecto a la cuenta general:</strong> retirar dinero antes de 5 años obliga a regularizar la exención. Las ganancias propias de esta cuenta no tienen la exención de los primeros 10.000€, solo la exclusión del 20% a partir del quinto año.</p>
+      </div>
+
+      <!-- SIALP FINANCIA EUROPA -->
+      <h2 id="sialp">El SIALP Financia Europa (SIALPFE)</h2>
+      <p>Junto a la Cuenta Financia Europa, el Real Decreto-ley 29/2026 crea también el <strong style="color:#fff">Seguro Individual de Ahorro a Largo Plazo Financia Europa</strong> (SIALPFE), un instrumento diferente pero complementario. Mientras la Cuenta es un contrato de inversión directa, el SIALPFE es un <strong style="color:#fff">seguro de vida-ahorro</strong> gestionado por una aseguradora, diseñado igualmente para canalizar el ahorro minorista hacia activos europeos.</p>
+
+      <div class="data-grid" style="grid-template-columns:repeat(2,1fr);margin:20px 0">
+        <div class="data-card">
+          <div class="num">10.000€</div>
+          <div class="label">Aportación máxima anual (el doble que el SIALP clásico)</div>
+        </div>
+        <div class="data-card">
+          <div class="num">30%</div>
+          <div class="label">Mínimo en renta variable (directa o indirecta en activos EEE)</div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;margin:20px 0">
+        <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px">Características clave del SIALPFE</div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;gap:14px">
+            <div style="width:32px;height:32px;border-radius:8px;background:rgba(200,151,58,.1);border:1px solid rgba(200,151,58,.2);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">📋</div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:3px">Un solo plan por contribuyente</div>
+              <div style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6">Solo se puede mantener un Plan de Ahorro a Largo Plazo vigente a la vez. Si ya tienes un SIALP clásico, debes elegir o esperar a su vencimiento.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:14px">
+            <div style="width:32px;height:32px;border-radius:8px;background:rgba(0,208,132,.1);border:1px solid rgba(0,208,132,.2);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">⭐</div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:3px">Exención total a los 5 años</div>
+              <div style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6">Los rendimientos quedan <strong style="color:#00D084">completamente exentos</strong> de IRPF si no se dispone del capital antes de que transcurran 5 años desde la primera aportación.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:14px">
+            <div style="width:32px;height:32px;border-radius:8px;background:rgba(123,143,245,.1);border:1px solid rgba(123,143,245,.2);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">⚠️</div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:3px">Sin garantía de capital</div>
+              <div style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6">A diferencia del SIALP clásico (que garantiza el 85% de lo aportado), el SIALPFE <strong style="color:#7B8FF5">no tiene garantía mínima obligatoria</strong> y conlleva riesgo real de pérdida de capital.</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:14px">
+            <div style="width:32px;height:32px;border-radius:8px;background:rgba(200,151,58,.1);border:1px solid rgba(200,151,58,.2);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0">🔄</div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:3px">Movilidad entre SIALPFE</div>
+              <div style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6">Se permite el traspaso entre diferentes SIALPFE conservando la antigüedad y sin tributar. También se puede pasar de un SIALP clásico a un SIALPFE, <strong style="color:#C8973A">pero no a la inversa</strong>.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:22px;margin:20px 0">
+        <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px">Activos en los que puede invertir la aseguradora</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.65);padding-left:4px"><span style="color:#C8973A;font-weight:700">→</span> Acciones cotizadas del EEE (excepto SOCIMIs)</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.65);padding-left:4px"><span style="color:#C8973A;font-weight:700">→</span> Instituciones de Inversión Colectiva (IIC) elegibles (excepto SICAV)</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.65);padding-left:4px"><span style="color:#C8973A;font-weight:700">→</span> Renta fija del EEE con calificación crediticia mínima BBB</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,.4);padding-left:4px"><span style="font-weight:700">✗</span> Derivados: excluidos</div>
+        </div>
+      </div>
+
+      <div class="nota">
+        <p><strong>Rescate anticipado:</strong> Si se retira capital antes de los 5 años, los rendimientos pierden la exención y tributan como rendimientos del capital mobiliario, con una retención del <strong>19%</strong> sobre el beneficio obtenido.</p>
+      </div>
+
+      <!-- COMPARATIVA -->
+      <h2 id="comparativa">Financia Europa vs. otros productos</h2>
+      <div class="comp-table-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Traspaso sin tributar</th>
+              <th>Exención por permanencia</th>
+              <th>Límite aportación</th>
+              <th>Garantía capital</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fondos de inversión</td>
+              <td class="yes">✓ Entre fondos</td>
+              <td class="no">No</td>
+              <td class="no">Sin límite</td>
+              <td class="no">No</td>
+            </tr>
+            <tr>
+              <td>Cuenta Financia Europa</td>
+              <td class="yes">✓ Acciones + ETFs + Fondos UE</td>
+              <td class="par">Parcial (+5 años)</td>
+              <td class="par">150.000€ vivos</td>
+              <td class="no">No</td>
+            </tr>
+            <tr>
+              <td>SIALP (clásico)</td>
+              <td class="no">No</td>
+              <td class="yes">✓ 100% si +5 años</td>
+              <td class="par">5.000€/año</td>
+              <td class="yes">✓ 85% mínimo</td>
+            </tr>
+            <tr>
+              <td>SIALP Financia Europa</td>
+              <td class="no">No</td>
+              <td class="yes">✓ +5 años</td>
+              <td class="par">10.000€/año</td>
+              <td class="no">No</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- CUÁNDO SE PUEDE CONTRATAR -->
+      <h2 id="cuando">¿Cuándo se podrá contratar?</h2>
+      <p>La cuenta todavía no se puede contratar. El Congreso rechazó el 2 de octubre el decreto original, y el Gobierno la recuperó en el Real Decreto-ley 29/2026. La Diputación Permanente del Congreso lo convalidó el <strong style="color:#fff">12 de noviembre</strong> con 35 votos a favor (PSOE, Sumar, PNV, ERC, Bildu y Podemos) y 34 en contra (PP, Vox y Junts). La norma sigue en vigor.</p>
+
+      <div style="margin:28px 0">
+        <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px">Pasos pendientes para su comercialización</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-dot done"></div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <div class="tl-date" style="color:#00D084">✓ Completado · 8 oct 2026</div>
+              <div class="tl-title">Real Decreto-ley en vigor</div>
+              <div class="tl-desc">Publicado en el BOE y en vigor desde el 8 de octubre de 2026.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-dot done"></div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <div class="tl-date" style="color:#00D084">✓ Completado · 12 nov 2026</div>
+              <div class="tl-title">Convalidación por la Diputación Permanente</div>
+              <div class="tl-desc">35 votos a favor, 34 en contra. La norma continúa en vigor.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-dot active"></div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <div class="tl-date" style="color:#C8973A">⏳ Pendiente · Sin fecha</div>
+              <div class="tl-title">Orden ministerial de información tributaria</div>
+              <div class="tl-desc">Hasta que entre en vigor, las entidades no pueden comercializar ni abrir cuentas.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-dot pending"></div><div class="tl-line"></div></div>
+            <div class="tl-content">
+              <div class="tl-date" style="color:#7B8FF5">⏳ Plazo máximo: 8 feb 2027</div>
+              <div class="tl-title">Registro de fondos elegibles de la CNMV</div>
+              <div class="tl-desc">El regulador tiene 4 meses desde la entrada en vigor. Mientras no exista, las entidades solo podrán ofrecer la cuenta con acciones.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-left"><div class="tl-dot pending"></div></div>
+            <div class="tl-content">
+              <div class="tl-date" style="color:#7B8FF5">⏳ Pendiente · Sin fecha</div>
+              <div class="tl-title">Orden ministerial sobre traslados entre entidades</div>
+              <div class="tl-desc">Hasta que se apruebe, no se podrá cambiar la cuenta de un banco o bróker a otro.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nota-azul">
+        <p><strong>¿Quién podrá ofrecerla?</strong> Los bancos habilitados para prestar servicios de inversión y las empresas de servicios de inversión, incluidas las extranjeras que operen en España a través de una sucursal.</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-box">
+        <div style="font-size:32px;margin-bottom:14px">📊</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:10px">Gestiona tu cartera cuando esté disponible</h3>
+        <p style="font-size:14px;color:rgba(255,255,255,.5);max-width:460px;margin:0 auto 24px;line-height:1.65">La herramienta <strong style="color:#fff">Invertir desde casa Pro</strong> te permitirá registrar y controlar tu Cuenta Financia Europa junto con el resto de tu cartera.</p>
+        <div class="btn-wrap" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <a href="app.html"><button class="btn-gold" style="padding:13px 28px;font-size:14px;width:100%">🔐 Acceder al dashboard</button></a>
+          <a href="index.html#solicitud"><button style="background:transparent;border:1px solid rgba(200,151,58,.4);color:#C8973A;border-radius:10px;padding:13px 24px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;width:100%">Solicitar acceso →</button></a>
+        </div>
+      </div>
+
+      <!-- VALORACIÓN LUCAS -->
+      <div id="opinion-lucas" class="lcm-quote" style="margin-top:52px;background:linear-gradient(135deg,rgba(200,151,58,.07) 0%,rgba(200,151,58,.02) 100%);border:1.5px solid rgba(200,151,58,.35);border-radius:20px;padding:38px 36px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:-20px;right:-20px;font-size:100px;opacity:.04;line-height:1">💬</div>
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px">
+          <div style="width:46px;height:46px;border-radius:50%;background:#C8973A;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">👤</div>
+          <div>
+            <div style="font-size:14px;font-weight:700;color:#fff">Lucas González</div>
+            <div style="font-size:12px;color:rgba(200,151,58,.7);font-weight:600;letter-spacing:.06em;text-transform:uppercase">Lucas Capital Management · Inversor particular</div>
+          </div>
+        </div>
+        <blockquote style="margin:0;padding:0;border:none;background:none">
+          <p style="font-family:'Playfair Display',serif;font-size:19px;font-style:italic;color:rgba(255,255,255,.88);line-height:1.75;margin-bottom:18px">«Llevaba muchos años esperando algo así, y por fin ha llegado. No es el instrumento perfecto, pero es un avance real y significativo para el inversor particular español. Combinando la Cuenta Financia Europa con el SIALP Financia Europa dentro de una estrategia bien planificada, tenemos por primera vez la posibilidad de <strong style="font-style:normal;color:#C8973A">diferir impuestos, reducir la fiscalidad de las ganancias y hacer crecer el ahorro a largo plazo con una eficiencia fiscal que hasta ahora solo estaba al alcance de los grandes patrimonios</strong>. Úsalo bien y puede marcar una diferencia real de cara a complementar tu jubilación.»</p>
+        </blockquote>
+        <div style="display:flex;align-items:center;gap:10px;margin-top:6px">
+          <div style="height:1px;flex:1;background:rgba(200,151,58,.2)"></div>
+          <span style="font-size:12px;font-weight:700;color:rgba(200,151,58,.5);letter-spacing:.08em;text-transform:uppercase">Noviembre 2026</span>
+          <div style="height:1px;flex:1;background:rgba(200,151,58,.2)"></div>
+        </div>
+      </div>
+
+      <!-- DISCLAIMER -->
+      <div class="disclaimer">
+        <p><strong style="color:rgba(255,255,255,.45)">Aviso legal:</strong> Este contenido tiene carácter exclusivamente informativo. No constituye asesoramiento jurídico ni fiscal. Consulta siempre con un asesor certificado. Lucas Capital Management no garantiza la exactitud ni actualización de la información ante posibles cambios normativos posteriores.</p>
+      </div>
+
+    </article><!-- /art-body -->
+
+    <!-- TOC LATERAL -->
+    <aside>
+      <div class="toc">
+        <div class="toc-title">Contenido</div>
+        <a href="#que-es">¿Qué es?</a>
+        <a href="#quien">Quién puede abrirla</a>
+        <a href="#fiscalidad">Fiscalidad</a>
+        <a href="#dividendos">Dividendos</a>
+        <a href="#activos">Activos elegibles</a>
+        <a href="#funcionamiento">Cómo funciona</a>
+        <a href="#incumplimientos">Incumplimientos</a>
+        <a href="#reinversion">Modalidad reinversión</a>
+        <a href="#sialp">SIALP Financia Europa</a>
+        <a href="#comparativa">Comparativa</a>
+        <a href="#cuando">¿Cuándo disponible?</a>
+        <a href="#opinion-lucas">Valoración LCM</a>
+        <hr class="toc-sep">
+        <a href="opinion.html" style="color:#C8973A;font-weight:600">✍️ Ir a Opinión →</a>
+        <a href="app.html" style="margin-top:8px;color:rgba(255,255,255,.35)">🔐 Dashboard</a>
+      </div>
+    </aside>
+
+  </div><!-- /content-wrap -->
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div style="width:26px;height:26px;border-radius:7px;background:#C8973A;display:flex;align-items:center;justify-content:center">
+          <svg viewBox="0 0 40 40" width="16" height="16"><circle cx="20" cy="20" r="17" fill="none" stroke="#040D1E" stroke-width="2.5"/><text x="20" y="27" text-anchor="middle" font-size="14" font-weight="900" font-family="Georgia,serif" fill="#040D1E">$</text></svg>
+        </div>
+        <span style="font-size:12px;color:rgba(255,255,255,.35)">© 2026 Lucas Capital Management · Lucas González Sánchez</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="opinion.html">Opinión</a>
+        <a href="reformas.html">Reformas</a>
+        <a href="index.html#solicitud">Contacto</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Highlight TOC on scroll
+const sections = document.querySelectorAll('[id]');
+const tocLinks = document.querySelectorAll('.toc a[href^="#"]');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if(window.scrollY >= s.offsetTop - 120) cur = s.id; });
+  tocLinks.forEach(a => {
+    a.classList.toggle('on', a.getAttribute('href') === '#' + cur);
+  });
+});
+</script>
+</body>
+</html>
